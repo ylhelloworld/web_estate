@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+    <title>无标题页</title>    
+
+    <script src="assets/js/jquery.js" type="text/javascript"></script> 
+    <script src="assets/js/json.js" type="text/javascript"></script>
+    
+    <script type="text/javascript"> 
+    $(document).ready(function(){ 
+//    var param={name:"yang","sex":'male'}
+//    param.test="test"; 
+//     
+//    var str_test=param.toJSONString();
+//    document.write(str_test);
+//------------------$.getJSON
+        $.getJSON( 
+            "response.aspx",
+            {'class':'UserMethod','method':'get_param_info','param':'test'},
+            function(data){
+              document.write(data.param_info); 
+            }
+        ); 
+//-----------------$.get
+//            $.get("response.aspx", { 'class':'UserMethod','method':'get_user_info2'},
+//              function(data){
+//                document.write(data.info);
+//              },'json');
+//-----------------$.ajax
+//jQuery.ajax({
+//            type: "post",
+//            async: true,
+//            url: "response.aspx",
+//            data: "{'class':'UserMethod','method':'get_user_info'}",
+//            contentType: "application/json; charset=utf-8",
+//            dataType: "json",
+//            cache: false,
+//            success: function (data) {
+//                 document.write(data.info);
+//            },
+//            error: function (err) { 
+//            }
+//        });        
+    });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
