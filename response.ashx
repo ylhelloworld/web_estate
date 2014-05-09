@@ -12,11 +12,12 @@ public class response : IHttpHandler {
     public void ProcessRequest (HttpContext context) {
 
         BsonDocument doc = new BsonDocument();
-        if (context.Request.QueryString["class"] != null && context.Request.QueryString["method"] != null)
+        if (context.Request.QueryString["class"] != null && context.Request.QueryString["method"] != null && context.Request.QueryString["input"] != null)
         {
 
             string str_class = context.Request.QueryString["class"].ToString();
             string str_method = context.Request.QueryString["method"].ToString();
+            string str_input = context.Request.QueryString["param"].ToString();
 
             try
             {
@@ -24,14 +25,14 @@ public class response : IHttpHandler {
                 object reflect_acvtive = Activator.CreateInstance(reflect_type, null);
 
                 MethodInfo method_info = reflect_type.GetMethod(str_method);
-                string result = (string)method_info.Invoke(reflect_acvtive, new object[] { "clinet json string" });
- 
-                context.Response.Write(result);  
+                string result = (string)method_info.Invoke(reflect_acvtive, new object[] { str_input });
+
+                context.Response.Write(result);
             }
             catch (Exception)
             {
                 doc.Add(new BsonElement("state", "0"));
-                doc.Add(new BsonElement("info", "class or method is wrong!"));
+                doc.Add(new BsonElement("info", "class or method or prama is wrong!"));
                 context.Response.Write(doc.ToString());
             }
 
@@ -39,7 +40,7 @@ public class response : IHttpHandler {
         else
         {
             doc.Add(new BsonElement("state", "0"));
-            doc.Add(new BsonElement("info", "class or method is empty!"));
+            doc.Add(new BsonElement("info", "class or method or param is empty!"));
             context.Response.Write(doc.ToString());
         }
        

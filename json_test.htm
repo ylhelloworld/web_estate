@@ -1,51 +1,42 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>无标题页</title> 
+    <script src="assets/js/jquery-1.7.2.js" type="text/javascript"></script> 
+    <script src="assets/js/json2.js" type="text/javascript"></script> 
+    <script src="assets/js/server.js" type="text/javascript"></script>
 
-<html xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-    <title>无标题页</title>    
-
-    <script src="assets/js/jquery.js" type="text/javascript"></script> 
-    <script src="assets/js/json.js" type="text/javascript"></script>
+    <script type="text/javascript">    
     
-    <script type="text/javascript"> 
-    $(document).ready(function(){ 
-//    var param={name:"yang","sex":'male'}
-//    param.test="test"; 
-//     
-//    var str_test=param.toJSONString();
-//    document.write(str_test);
-//------------------$.getJSON
-        $.getJSON( 
-            "response.aspx",
-            {'class':'UserMethod','method':'get_param_info','param':'test'},
-            function(data){
-              document.write(data.param_info); 
-            }
-        ); 
-//-----------------$.get
-//            $.get("response.aspx", { 'class':'UserMethod','method':'get_user_info2'},
-//              function(data){
-//                document.write(data.info);
-//              },'json');
-//-----------------$.ajax
-//jQuery.ajax({
-//            type: "post",
-//            async: true,
-//            url: "response.aspx",
-//            data: "{'class':'UserMethod','method':'get_user_info'}",
-//            contentType: "application/json; charset=utf-8",
-//            dataType: "json",
-//            cache: false,
-//            success: function (data) {
-//                 document.write(data.info);
-//            },
-//            error: function (err) { 
-//            }
-//        });        
-    });
+    
+    var input={};
+    input.user_name="yang";
+    input.sex="male";
+    
+    
+    var call_back=function(result){
+           document.writeln("执行状态："+result.state);
+           document.writeln("<br/>");
+           document.writeln("执行信息："+result.info);
+           document.writeln("<br/>");
+           document.writeln("输入参数："+result.input);
+           document.writeln("<br/>");
+           document.writeln("返回结果："+result.user_info);  
+    }
+    var result=execute_method("UserMethod","get_user_info",input,call_back);
+     
+     
+//      $.getJSON("response.aspx",
+//               {type:"UserMethod",method:"get_user_info",input:"{user_name:'YangLong',sex:'male'}"},
+//               function(data){
+//                   document.writeln(data.input);
+//                   document.writeln("<br/>");
+//                   document.writeln(data.user_info); 
+//      });
+        
     </script>
-</head>
-<body>
 
+</head>
+<body> 
 </body>
 </html>

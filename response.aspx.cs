@@ -17,38 +17,38 @@ using MongoDB.Bson;
 public partial class response : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
-    {
+    { 
         BsonDocument doc = new BsonDocument();
-        if (Request.QueryString["class"] != null && Request.QueryString["method"] != null&& Request.QueryString["param"] != null)
+        if (Request.QueryString["type"] != null && Request.QueryString["method"] != null && Request.QueryString["input"] != null)
         {
 
-            string str_class = Request.QueryString["class"].ToString();
+            string str_class = Request.QueryString["type"].ToString();
             string str_method = Request.QueryString["method"].ToString();
-            string str_param = Request.QueryString["param"].ToString();
+            string str_input = Request.QueryString["input"].ToString();
 
-           
+
             try
             {
                 Type reflect_type = Assembly.Load("App_Code").GetType(str_class);
                 object reflect_acvtive = Activator.CreateInstance(reflect_type, null);
 
                 MethodInfo method_info = reflect_type.GetMethod(str_method);
-                string result = (string)method_info.Invoke(reflect_acvtive, new object[] {str_param});
+                string result = (string)method_info.Invoke(reflect_acvtive, new object[] { str_input });
 
                 Response.Write(result);
             }
-            catch (Exception)
+            catch (Exception error)
             {
                 doc.Add(new BsonElement("state", "0"));
-                doc.Add(new BsonElement("info", "class or method is wrong!"));
+                doc.Add(new BsonElement("info", error.Message));
                 Response.Write(doc.ToString());
             }
 
         }
         else
-        { 
+        {
             doc.Add(new BsonElement("state", "0"));
-            doc.Add(new BsonElement("info", "class or method is empty!"));
+            doc.Add(new BsonElement("info", "class or method or parameter is empty!"));
             Response.Write(doc.ToString());
         }
        
