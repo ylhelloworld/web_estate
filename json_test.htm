@@ -12,9 +12,11 @@
     var input={};
     input.user_name="yang";
     input.sex="male";
+    input.birthday='1988-08-24';
     
     
     var call_back=function(result){
+           document.writeln("<div style='border-style:dashed; border-width:thin;padding:5px;'>");
            document.writeln("执行状态："+result.state);
            document.writeln("<br/>");
            document.writeln("执行信息："+result.info);
@@ -22,21 +24,14 @@
            document.writeln("输入参数："+result.input);
            document.writeln("<br/>");
            document.writeln("返回结果："+result.user_info);  
+           document.writeln("</div>");
+           
     }
-    var result=execute_method("UserMethod","get_user_info",input,call_back);
-     
-     
-//      $.getJSON("response.aspx",
-//               {type:"UserMethod",method:"get_user_info",input:"{user_name:'YangLong',sex:'male'}"},
-//               function(data){
-//                   document.writeln(data.input);
-//                   document.writeln("<br/>");
-//                   document.writeln(data.user_info); 
-//      });
+    var result=execute_method("UserMethod","get_user_info",input,call_back); 
         
     </script>
 
 </head>
-<body> 
+<body style="">  
 </body>
 </html>

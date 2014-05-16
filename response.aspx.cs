@@ -17,7 +17,8 @@ using MongoDB.Bson;
 public partial class response : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
-    { 
+    {  
+
         BsonDocument doc = new BsonDocument();
         if (Request.QueryString["type"] != null && Request.QueryString["method"] != null && Request.QueryString["input"] != null)
         {
