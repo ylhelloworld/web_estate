@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="home_app">
+<head>
+
+    <script src="assets/js/angular.js" type="text/javascript"></script> 
+    <script src="assets/js/controller.js" type="text/javascript"></script> 
+    <script src="assets/js/jquery.js" type="text/javascript"></script> 
+    <script src="assets/js/application.js" type="text/javascript"></script> 
+    <script src="assets/js/bootstrap.js" type="text/javascript"></script>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/docs.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/add.css" rel="stylesheet" type="text/css" />
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" />
+
+    <script src="assets/foxibox/script/jquery-foxibox-0.2.js" type="text/javascript"></script> 
+    <link href="assets/foxibox/style/jquery-foxibox-0.2.css" rel="stylesheet" type="text/css" />
+
+    <script src="assets/jquery_ui/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script> 
+    <link href="assets/jquery_ui/css/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">  
+      $(function () {
+             $.get("menu_white.htm", function(data){ 
+                 $("#menu").append(data); 
+              }); 
+         
+		     $("#maps").tabs();  
+		      
+		    //显示图片  
+		     $('a[rel]').foxibox();
+		    
+		    //滚动到顶部
+		    $(window).scroll(function() {
+		        if($(this).scrollTop() != 0) {
+			        $('#toTop').fadeIn();	
+		        } else {
+			        $('#toTop').fadeOut();
+		        }
+	        });
+            
+	        $('#toTop').click(function() {
+		        $('body,html').animate({scrollTop:0},800);
+	        });
+		});
+    </script>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar" ng-controller="home_controller"> 
+  
+    <div id="wrap"> 
+    <div id="menu"></div>
+    
+        <div class="container">
+            <div class="row">
+                <div class="span3 bs-docs-sidebar" style="margin-top:10px;">
+                     <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Find Title
+                        </div>
+                        <div class="panel-body">
+                            <div class="row-fluid"> 
+                                <div class="span3" style="text-align: center; margin-top: 5px; padding-right: 5px;"> User:</div> 
+                                <input type="text" class=" span9" placeholder="User Name" />
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span3" style="text-align: center; margin-top: 5px; padding-right: 5px;">  Pass:</div>
+                                <input type="text" class=" span9" placeholder="Pass World" />
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span3" style="text-align: center; margin-top: 5px; padding-right: 5px;"> User:</div>
+                                <select class="span9">
+                                    <option></option>
+                                    <option>YangZhou</option>
+                                    <option>YangZhou</option>
+                                    <option>YangZhou</option>
+                                    <option>YangZhou</option>
+                                    <option>YangZhou</option>
+                                </select>
+                            </div>
+                            <div style="text-align: center;">
+                                <input type="button" class="btn btn-primary" value="Login" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span9" style="margin-top: 10px;">
+                          <div class="panel panel-primary">
+                    <ul class="breadcrumb">
+                        <li><a href="#">Contry</a> <span class="divider">/</span></li>
+                        <li><a href="#">City</a> <span class="divider">/</span></li>
+                        <li class="active">Data</li>
+                    </ul>
+                    <div class="panel-body">
+                      <!----------------------------------------------------------------------------------------------------------->
+                        <div class="row-fluid"> 
+                                <div class="panel panel-primary">
+                                    <div class="panel-body">
+                                        <div style="height: 300px;"> &nbsp;</div>
+                                    </div>
+                                </div>
+                        </div>
+                       <!----------------------------------------------------------------------------------------------------------->
+                        <div>
+                            <h4> <i class="icon-list"></i>Lorem Ipsum</h4>
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!----------------------------------------------------------------------------------------------------------->
+                        <div>
+                            <h4><i class="icon-list"></i>Phasellus Mattis</h4>
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div id="maps">
+                                        <ul>
+                                            <li><a href="#tabs-1">First</a></li>
+                                            <li><a href="#tabs-2">Second</a></li>
+                                            <li><a href="#tabs-3">Third</a></li>
+                                        </ul>
+                                        <div id="tabs-1">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </div>
+                                        <div id="tabs-2">
+                                            Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet
+                                            ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum
+                                            bibendum.
+                                        </div>
+                                        <div id="tabs-3">
+                                            Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi
+                                            urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor
+                                            ullamcorper augue.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!----------------------------------------------------------------------------------------------------------->
+                        <div>
+                            <h4>
+                                <i class="icon-list"></i>Show All Pictures</h4>
+                            <div class="panel panel-default">
+                                 <div class="panel-body">
+                                        <a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 01" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 02" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 03" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 04" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 05" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 06" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 07" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 08" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 09" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 10" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 11" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 12" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 13" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 14" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 15" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a><a class=" thumbnail" href="http://placehold.it/600x400&text=Photo 16" rel="[gall1]" title="first picture"
+                                            style="float: left;">
+                                            <img src="http://placehold.it/180x120" alt="first picture" />
+                                        </a>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <div id="foot">
+                            <h4>
+                                <i class="icon-list"></i>Lorem Ipsum</h4>
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div id="toTop"><i class="icon-chevron-up"></i>返回顶部</div>
+</body>
+</html>

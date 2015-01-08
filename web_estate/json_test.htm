@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>无标题页</title> 
+    <script src="assets/js/jquery-1.7.2.js" type="text/javascript"></script> 
+    <script src="assets/js/json2.js" type="text/javascript"></script> 
+    <script src="assets/js/server.js" type="text/javascript"></script>
+
+    <script type="text/javascript">    
+    
+    
+    var input={};
+    input.user_name="yang";
+    input.sex="male";
+    input.birthday='1988-08-24';
+    
+    
+    var call_back=function(result){
+           document.writeln("<div style='border-style:dashed; border-width:thin;padding:5px;'>");
+           document.writeln("执行状态："+result.state);
+           document.writeln("<br/>");
+           document.writeln("执行信息："+result.info);
+           document.writeln("<br/>");
+           document.writeln("输入参数："+result.input);
+           document.writeln("<br/>");
+           document.writeln("返回结果："+result.user_info);  
+           document.writeln("</div>"); 
+    }
+    
+    var result=execute_method("UserMethod","get_user_info",input,call_back); 
+        
+    </script>
+
+</head>
+<body>  
+</body>
+</html>
