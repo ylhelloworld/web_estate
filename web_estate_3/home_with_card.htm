@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="home_app">
+<head>
+
+   
+    <!--JQuery-->
+    <script src="asset/js/jquery-1.9.1.js" type="text/javascript"></script>
+    
+    <!--BootStrap-->
+    <link href="asset/bootstrap_3.1/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="asset/bootstrap_3.1/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="asset/font_awesome_4.1.0/css/font-awesome.css" rel="stylesheet" type="text/css" /> 
+    <script src="asset/bootstrap_3.1/js/bootstrap.js" type="text/javascript"></script>
+     
+     <!--Web Css-->
+    <link href="asset/css/doc.css" rel="stylesheet" type="text/css" />
+     
+    <!-- <link href="asset/css/docs.css" rel="stylesheet" type="text/css" />-->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+          <script src="asset/bootstrap_3.1/js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+      $().ready(function(){ 
+         $.get("menu_white.htm", function(data){ 
+             $("#menu").append(data); 
+         });
+      })
+    </script>
+</head>
+<body>
+    <div id="menu" style="margin-bottom: 60px;">
+    </div>
+    <div class="container">
+          <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item active">  Cras justo odio </a>
+                      <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                      <a href="#" class="list-group-item">Morbi leo risus</a>
+                      <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                      <a href="#" class="list-group-item">Vestibulum at eros</a>
+                    </div>
+                </div>
+                <div class="col-md-9"> 
+                    <div class="panel panel-primary" style="margin-top:10px;"> 
+                            <div class="panel-body">
+                                  <div class="row">
+                                      <div class="col-md-4">
+                                            <ul class="list-group" style="margin-left: 2px">
+                                               <li class="list-group-item"><span class="badge  large" style="font-size:15px; float:left;">1</span> incididunt ut labore et dolore</li> 
+                                               <li class="list-group-item"><span class="badge  large" style="font-size:15px;float:left;">2</span> incididunt ut labore et dolore</li>
+                                               <li class="list-group-item"><span class="badge  large" style="font-size:15px;float:left;">3</span> incididunt ut labore et dolore</li>
+                                               <li class="list-group-item"><span class="badge  large" style="font-size:15px;float:left; background-color:#006dcc;">4</span> incididunt ut labore et dolore</li>
+                                               <li class="list-group-item"><span class="badge  large" style="font-size:15px;float:left;">5</span> incididunt ut labore et dolore</li>
+                                               <li class="list-group-item"><span class="badge  large" style="font-size:15px;float:left;">6</span> incididunt ut labore et dolore</li>
+                                               <li class="list-group-item"><span class="badge  large" style="font-size:15px;float:left;">7</span> incididunt ut labore et dolore</li>
+                                               <li class="list-group-item"><span class="badge  large" style="font-size:15px;float:left;">8</span> incididunt ut labore et dolore</li>
+                                               <li class="list-group-item"><span class="badge  large" style="font-size:15px;float:left;">9</span> incididunt ut labore et dolore</li>
+                                            </ul> 
+                                      </div>
+                                      <div class="col-md-4">
+                                            <div class="panel panel-primary" style="margin-top:10px;"> 
+                                                <div class="panel-body">
+                                                      <h2> Persent 25%</h2>
+                                                      <p>incididunt ut labore et dolore</p>
+                                                      <p style=" float:right;">
+                                                         <a class="btn btn-primary" > Read  more </a>
+                                                      </p>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-primary" style="margin-top:10px;"> 
+                                                <div class="panel-body">
+                                                      <h2> Persent 35%</h2>
+                                                      <p>incididunt ut labore et dolore</p>
+                                                      <p style=" float:right;">
+                                                        <a class="btn btn-primary" >
+                                                          Read  more
+                                                        </a>
+                                                      </p>
+                                                </div>                                                
+                                            </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                            <div class="thumbnail">
+                                                <img src="http://placehold.it/800x500" alt="">
+                                                <div class="caption">
+                                                    <h3> Feature Label</h3>
+                                                    <p> This would be a great spot to feature some brand new products!</p> <p>
+                                                        <a href="#" class="btn btn-primary">Read Now!</a> 
+                                                        <a href="#" class="btn btn-default"> More Info</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                      </div>
+                                  </div> 
+                            </div> 
+                    </div>
+                    <div class="panel panel-primary" style="margin-top:10px;"> 
+                            <div class="panel-body">
+                                  <div class="row">
+                                      <div class="col-md-4">
+                                              <ul class="list-group" style="margin-left: 2px">
+                                               <li class="list-group-item">
+                                                    <div class="media">
+                                                      <a class="pull-left" href="#"style="font-size:50px; vertical-align:middle;  font-weight: bold; font-style: italic;"> 1</a>
+                                                      <div class="media-body">
+                                                        <h5 class="media-heading">Media heading</h5> 
+                                                        <div class="media" style="margin-top:-5px;"> Cras sit amet nibh libero, in gravida nulla.</div>
+                                                      </div>
+                                                    </div> 
+                                               </li> 
+                                                <li class="list-group-item">
+                                                    <div class="media">
+                                                      <a class="pull-left" href="#"style="font-size:50px; vertical-align:middle;  font-weight: bold; font-style: italic;"> 2</a>
+                                                      <div class="media-body">
+                                                        <h5 class="media-heading">Media heading</h5> 
+                                                        <div class="media" style="margin-top:-5px;"> Cras sit amet nibh libero, in gravida nulla.</div>
+                                                      </div>
+                                                    </div> 
+                                               </li> 
+                                                <li class="list-group-item">
+                                                    <div class="media">
+                                                      <a class="pull-left" href="#"style="font-size:50px; vertical-align:middle;  font-weight: bold; font-style: italic;">3</a>
+                                                      <div class="media-body">
+                                                        <h5 class="media-heading">Media heading</h5> 
+                                                        <div class="media" style="margin-top:-5px;"> Cras sit amet nibh libero, in gravida nulla.</div>
+                                                      </div>
+                                                    </div> 
+                                               </li> 
+                                                <li class="list-group-item">
+                                                    <div class="media">
+                                                      <a class="pull-left" href="#"style="font-size:50px; vertical-align:middle;  font-weight: bold; font-style: italic;"> 4</a>
+                                                      <div class="media-body">
+                                                        <h5 class="media-heading">Media heading</h5> 
+                                                        <div class="media" style="margin-top:-5px;"> Cras sit amet nibh libero, in gravida nulla.</div>
+                                                      </div>
+                                                    </div> 
+                                               </li> 
+                                                <li class="list-group-item">
+                                                    <div class="media">
+                                                      <a class="pull-left" href="#"style="font-size:50px; vertical-align:middle;  font-weight: bold; font-style: italic;"> 5</a>
+                                                      <div class="media-body">
+                                                        <h5 class="media-heading">Media heading</h5> 
+                                                        <div class="media" style="margin-top:-5px;"> Cras sit amet nibh libero, in gravida nulla.</div>
+                                                      </div>
+                                                    </div> 
+                                               </li> 
+                                               
+                                            </ul> 
+                                      </div> 
+                                      <div class="col-md-4">
+                                             <div class="thumbnail">
+                                                    <img src="http://placehold.it/320x150" alt="">
+                                                    <div class="caption">
+                                                        <h4 class="pull-right">$24.99</h4>
+                                                        <h4><a href="#">First Product</a>
+                                                        </h4>
+                                                        <p>See more snippets like this online store item at <a target="_blank" href=""> http://yzteting.com</a>.</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="pull-right">15 reviews</p>
+                                                        <p>
+                                                            <span ><li class=" fa fa-star "> </li></span>
+                                                            <span ><li class="fa fa-star"> </li></span>
+                                                            <span ><li class="fa fa-star"> </li></span>
+                                                            <span ><li class="fa fa-star"> </li></span>
+                                                            <span ><li class="fa fa-star-half"> </li></span> 
+                                                        </p>
+                                                    </div>
+                                            </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                          <div class="thumbnail">
+                                                <img src="http://placehold.it/800x500" alt="">
+                                                <div class="caption">
+                                                    <h3> Feature Label</h3>
+                                                    <p> This would be a great spot to feature some brand new products!</p> <p>
+                                                        <a href="#" class="btn btn-primary">Read Now!</a> 
+                                                        <a href="#" class="btn btn-default"> More Info</a>
+                                                    </p>
+                                                </div>
+                                            </div> 
+                                      </div>
+                                  </div> 
+                            </div> 
+                    </div>
+                    <div class="panel panel-primary" style="margin-top:10px;"> 
+                            <div class="panel-body">
+                                 <div class="row">
+                                     <div class="col-md-4">
+                                                <div class="panel panel-default text-center">
+                                                    <div class="panel-heading">
+                                                        <strong>Basic</strong>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <h3 class="panel-title price" style="font-size: 4em;">$9
+                                                            <span class="price-cents" style="vertical-align: super;font-size: 50%;">99</span>
+                                                            <span class="price-month" style="font-size: 35%;font-style: italic;">mo.</span>
+                                                        </h3>
+                                                    </div>
+                                                    <ul class="list-group" style="margin-left: 2px">
+                                                        <li class="list-group-item">5 Projects</li>
+                                                        <li class="list-group-item">5 GB of Storage</li>
+                                                        <li class="list-group-item">Up to 100 Users</li>
+                                                        <li class="list-group-item">10 GB Bandwidth</li>
+                                                        <li class="list-group-item">Security Suite</li>
+                                                        <li class="list-group-item"><a class="btn btn-primary">Sign Up Now!</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                      </div>
+                                     <div class="col-md-4">
+                                            <div class="panel panel-primary" style="margin-top:10px;"> 
+                                                <div class="panel-body">
+                                                      <h2> Persent 25%</h2>
+                                                      <p>incididunt ut labore et dolore</p>
+                                                      <p style=" float:right;">
+                                                        <a class="btn btn-primary" > Read  more </a>
+                                                      </p>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-primary" style="margin-top:10px;"> 
+                                                <div class="panel-body">
+                                                      <h2> Persent 35%</h2>
+                                                      <p>incididunt ut labore et dolore</p>
+                                                      <p style=" float:right;">
+                                                        <a class="btn btn-primary"> Read  more </a>
+                                                      </p>
+                                                </div>                                                
+                                            </div>
+                                      </div>
+                                     <div class="col-md-4">
+                                            <div class="thumbnail">
+                                                <img src="http://placehold.it/800x500" alt="">
+                                                <div class="caption">
+                                                    <h3> Feature Label</h3>
+                                                    <p> This would be a great spot to feature some brand new products!</p> <p>
+                                                        <a href="#" class="btn btn-primary">Read Now!</a> 
+                                                        <a href="#" class="btn btn-default"> More Info</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                      </div>
+                                  </div> 
+                            </div> 
+                    </div>
+               </div> 
+          </div> 
+     </div>
+</body>
+</html>

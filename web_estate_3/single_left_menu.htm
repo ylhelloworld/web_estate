@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--JQuery-->
+
+    <script src="asset/js/jquery-1.7.2.js" type="text/javascript"></script> 
+
+    <!--BootStrap-->
+    <link href="asset/bootstrap_3.1/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="asset/bootstrap_3.1/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="asset/font_awesome_4.1.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+    <script src="asset/bootstrap_3.1/js/bootstrap.js" type="text/javascript"></script>
+
+
+    <link href="asset/css/add.css" rel="stylesheet" type="text/css" />
+    <link href="asset/css/single_left_menu.css" rel="stylesheet" type="text/css" />
+ 
+    <script src="asset/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+    <!-- <link href="asset/css/docs.css" rel="stylesheet" type="text/css" />-->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+          <script src="asset/bootstrap_3.1/js/respond.js" type="text/javascript"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      $(document).ready(function(){
+           //设置菜单,并设置位置
+	       $(".slide-list").slide({  type:"menu", titCell:".slide-item-title", targetCell:".slide-item-detail", delayTime:0, triggerTime:0, defaultPlay:false, returnDefault:true }); 
+           var panel_width=$("#panel_menu").width();
+           $(".slide-item-detail").css("left",panel_width); 
+           $(window).resize(function(){
+               var panel_width=$("#panel_menu").width();
+               $(".slide-item-detail").css("left",panel_width);
+           }); 
+      });
+      
+    
+    </script>
+   
+</head>
+<body> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">  
+                  <div id="panel_menu" class="panel panel-primary" style="margin-top:10px;"> 
+                      <div class="panel-heading ">
+                          <span>Information<em>（686310）</em></span>
+                      </div> 
+                        <div class="slide-menu">
+                            <ul class="slide-list">
+                                <li id="slide-title-1" class="slide-item-title">
+                                  <h3><span>&gt;</span><li class="fa fa-home"></li><a href="#"> White</a></h3>
+                                  <p><a href="#">First</a><a href="#">Second</a><a href="#">Third</a></p>
+                                  <p><a href="#">Forth</a><a href="#">Second</a><a href="#">Wins</a><a href="#">Test</a></p>
+                                          <div class="slide-item-detail" style="display: none;">
+                                            <ul class="ul-full">
+                                              <h4><li class="fa  fa-phone" style=" width:20px; float:none;"></li> Brand</h4>
+                                              <li> <span><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a></span> <span><a href="#" class="sub_width">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#" class="sub_width">brand</a></span><span><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#" class="sub_width1">brand</a><a href="#" class="sub_width">brand</a></span><span><a href="#" class="sub_width1">brand</a><a href="#" class="sub_width">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a></span><span><a href="#" class="sub_width">brand</a><a href="#" class="sub_width1">brand</a><a href="#" class="sub_width1">brand</a><a href="#" class="sub_width">brand</a><a href="#">brand</a></span> </li>
+                                              <li> <span><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a></span><span><a href="#" class="sub_width">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#" class="sub_width">brand</a></span><span><a href="#">brand</a><a href="#">brand</a><a href="#" class="sub_width1">brand</a><a href="#" class="sub_width1">brand</a></span><span><a href="#">brand</a><a href="#">brand</a><a href="#" class="sub_width1">brand</a><a href="#">brand</a><a href="#">brand</a></span><span><a href="#">brand</a><a href="#" class="sub_width1">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a></span><span><a href="#" class="sub_width">brand</a><a href="#" class="sub_width_long">brand</a></span> </li>
+                                              <li> <span><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#" class="sub_width1">brand</a></span><span><a href="#">brand </a><a href="#">brand</a><a href="#">brand</a><a href="#" class="sub_width">brand</a><a href="#">brand</a></span><span><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a></span><span><a href="#">brand</a><a href="#">brand</a><a href="#" class="sub_width">brand</a><a href="#">brand</a><a href="#">brand</a></span><span><a href="#">brand</a><a href="#" class="sub_width">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#">brand</a></span><span><a href="#" class="sub_width">brand</a><a href="#">brand</a><a href="#">brand</a><a href="#" class="sub_width1">brand</a></span> </li>
+                                            </ul>
+                                            <ul class="ul-230">
+                                              <h4><li class="fa  fa-photo" style=" width:20px; float:none;"></li> Class</h4>
+                                              <li> <span><a href="#">slow</a><a href="#">slow</a><a href="#">slow</a><a href="#">slow</a></span><span><a href="#" class="sub_width">slow</a><a href="#">slow</a><a href="#">slow</a><a href="#">slow</a></span><span><a href="#">slow</a><a href="#">slow</a><a href="#">slow</a><a href="#">slow</a></span><span><a href="#" class="sub_width">slow</a><a href="#">slow</a><a href="#">slow</a><a href="#">other</a></span> </li>
+                                            </ul>
+                                            <ul class="ul-230">
+                                              <h4><li class="fa   fa-adn" style=" width:20px; float:none;"></li> Prvince</h4>
+                                              <li> <span><a href="#">GuangZhhou</a><a href="#">GuangZhhou</a><a href="#">GuangZhhou</a><a href="#">GuangZhhou</a><a href="#">GuangZhhou</a><a href="#">GuangZhhou</a></span><span><a href="#" class="sub_width1">GuangZhhou</a><a href="#">GuangZhhou</a><a href="#">GuangZhhou</a><a href="#">GuangZhhou</a><a href="#">GuangZhhou</a><a href="#" class="sub_width1">GuangZhhou</a></span></li>
+                                            </ul>
+                                            <ul class="ul-230">
+                                              <h4><li class="fa   fa-envelope" style=" width:20px; float:none;"></li> Price</h4>
+                                              <li> <span><a href="#">1 - 99</a><a href="#">100 - 299</a><a href="#">300 - 599</a></span><span><a href="#">600 - 999</a><a href="#">1000 - 1999</a></span><span><a href="#" class="sub_width_long">2000</a></span> </li>
+                                            </ul>
+                                          </div>
+                                </li>
+                                <li id="slide-item-title-2" class="slide-item-title">
+                                  <h3><span>&gt;</span><li class="fa fa-female"></li> <a href="#"> Grap</a></h3>
+                                  <p><a href="#">France</a><a href="#">France</a><a href="#">France</a><a href="#">France</a></p>
+                                  <p><a href="#">France</a><a href="#">France</a><a href="#">France</a><a href="#">France</a></p>
+                                  <div class="slide-item-detail" style="display: none;">
+                                    <div style="height:300px;"> France </div>
+                                  </div>
+                                </li>
+                                <li id="slide-item-title-3" class="slide-item-title">
+                                  <h3><span>&gt;</span><li class="fa  fa-lock"></li><a href="#"> Red</a></h3>
+                                  <p><a href="#">header</a><a href="#">header</a><a href="#">header</a><a href="#">header</a></p>
+                                  <p><a href="#">header</a><a href="#">header</a><a href="#">header</a><a href="#">header</a></p>
+                                  <div class="slide-item-detail" style="display: none;">
+                                    <div style="height:300px;"> header </div>
+                                  </div>
+                                </li>
+                                <li id="slide-item-title-4" class="slide-item-title">
+                                  <h3><span>&gt;</span><li class="fa  fa-car"></li><a href="#"> Beer</a></h3>
+                                  <p><a href="#">beer</a><a href="#">beer</a><a href="#">beer</a><a href="#">beer</a></p>
+                                  <p><a href="#">beer</a><a href="#">beer</a><a href="#">beer</a><a href="#">beer</a></p>
+                                  <div class="slide-item-detail" style="display: none;">
+                                    <div style="height:300px;"> beer </div>
+                                  </div>
+                                </li>
+                                <li id="slide-item-title-5" class="slide-item-title">
+                                  <h3><span>&gt;</span><li class="fa   fa-book"></li><a href="#"> Health/</a><a href="#">Health</a></h3>
+                                  <p><a href="#">bright</a><a href="#">bright</a><a href="#">bright</a><a href="#">bright</a></p>
+                                  <p><a href="#">bright</a><a href="#">bright</a><a href="#">bright</a><a href="#">bright</a></p>
+                                  <div class="slide-item-detail" style="display: none;">
+                                    <div style="height:300px;"> bright </div>
+                                  </div>
+                                </li>
+                                <li id="slide-item-title-6" class="slide-item-title">
+                                  <h3><span>&gt;</span><li class="fa  fa-ambulance"></li><a href="#"> Sprot</a></h3>
+                                  <p><a href="#">football</a><a href="#">football</a><a href="#">football</a><a href="#">football</a></p>
+                                  <div class="slide-item-detail" style="display: none;">
+                                    <div style="height:300px;"> football </div>
+                                  </div>
+                                </li>
+                          </ul>   
+                        </div> 
+                    </div>    
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"> 
+              <div class="left-menu"> 
+                  <div class="panel panel-default" style="margin-top:10px;">
+                      <!-- Default panel contents -->
+                      <div class="panel-heading ">
+                          <span>Information<em>（686310）</em></span>
+                      </div>
+<!--                      <div class="panel-body">
+                        <p>...</p>
+                      </div>
+-->
+                      <!-- List group -->
+                      <ul class="list-group">
+                        <li class="list-group-item">
+                        <div> Cras justo odio</div>
+                        <div class="list-group-item-detail" style="width:200px;height:100px; border-style:dashed; border-width:2px; display:none;"> &nbsp;</div>
+                          
+                        
+                        </li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                      </ul>
+                    </div>  
+             </div> 
+              
+            </div>
+        </div>
+    </div>
+<div>
+  
+</div> 
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿/*news_list*/ 
+.news_list .col-md-4{
+ padding-right : 5px;
+ padding-left : 5px;
+}
+.news_list .list-group{
+	margin-bottom:0px;
+}
+
+/*Home Nav Bar*/
+.home-navbar{
+	background-repeat: repeat-x;
+	background-image: linear-gradient(to bottom, #428BCA 0%, #357EBD 100%);
+	color: #FFF;
+	background-color: #428BCA;
+	border-color: #428BCA;
+}
+.home-navbar a{
+	color:White;
+}
+.home-navbar a:hover{
+	color:Black;
+} 
